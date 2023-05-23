@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Website using HTML,CSS,Bootstrap & JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function myfun(evt, Name) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(Name).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+
+        function displayContent(event, contentNameID) {
+
+            let content =
+                document.getElementsByClassName("contentClass");
+            let totalCount = content.length;
+
+
+            for (let count = 0; count < totalCount; count++) {
+                content[count].style.display = "none";
+            }
+
+            let links =
+                document.getElementsByClassName("linkClass");
+            totalLinks = links.length;
+
+
+            for (let count = 0; count < totalLinks; count++) {
+                links[count].classList.remove("active");
+            }
+
+
+            document.getElementById(contentNameID)
+                .style.display = "block";
+
+
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container"><br>
+        <div id="box">
+
+            <img src="logo.png" width="90px" heigth="90px">
+            <p class="text1">I.K. GUJRAL PUNJAB TECHNICAL UNIVERSITY,<br> JALANDHAR<br><span class="text"><b>(A State
+                                University Established by Govt. of Punjab vide<br> Punjab Act No. of
+                                1997)</b></span>
+            </p>
+
+            <div class="float-right">
+
+                <img src="e-office.jpg" width="15px" height="15px"><a href="https://parichay.nic.in/pnv1/assets/login.html?service=passive&active=true&rm_5=false&continue=https%3A%2F%2Fjan_com%2Fmail%2F&pp=1&scc=1&lmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&sid=eOfficePau"
+                    style="color:black;">e-office</a> | <img src="email icon.png" width="15px" height="15px"><a href="https://parichay.nic.in/pnv1/assets/login.html?service=passive&active=true&rm_5=false&continue=https%3A%2F%2Fjan_com%2Fmail%2F&pp=1&scc=1&lmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&sid=eOfficePau"
+                    style="color:black;">E-mail</a> | <img src="accessibilityicon.jpg" width="15px" height="15px"><a href="https://ptu.ac.in/accessibility/" style="color:black;">Accessibility</a> |
+                <img src="accessibilityicon.jpg" width="15px" height="15px"><a href="https://ptu.ac.in/#" style="color:black;">Sitemap</a> | <img src="login.png" width="15px" height="15px"><a href="https://ptu.ac.in/secureptulogin/" style="color:black;">Login</a><br>
+
+                <h3>For Student Enquiry:<span style="color:rgb(172, 23, 23);"><img src="D:\web development\phone.jpg"
+                                    width="15px" height="15px"> 1800-330-2501</span></h3>
+            </div>
+        </div><br>
+
+        <nav class="navbar navbar-dark" style="background-color: rgb(11, 25, 90);">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ABOUT
+                                    <span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="color:white;">
+                            <li><a href="https://ptu.ac.in/about/">ABOUT IKGPTU</a></li>
+                            <li class="divider"></li>
+                            <li><a href="https://ptu.ac.in/vision/">VISION</a></li>
+                            <li class="divider"></li>
+                            <li><a href="https://ptu.ac.in/mission/">MISSION</a></li>
+                            <li class="divider"></li>
+                            <li><a href="https://ptu.ac.in/successive-vice-chancellor/">SUCCESSIVE VICE CHANCELLOR</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">AUTHORITIES</a></li>
+                            <li class="divider"></li>
+                            <li><a href="https://ptu.ac.in/administration/">ADMINISTRATION</a></li>
+                            <li class="divider"></li>
+                            <li><a href="https://ptu.ac.in/administration/">NAAC</a></li>
+                            <li class="divider"></li>
+                            <li><a href="https://ptu.ac.in/ptu-act/">PTU ACT</a></li>
+                            <li class="divider"></li>
+                            <li><a href="https://ptu.ac.in/location-map/">LOCATION MAP</a></li>
+                        </ul>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMINISTRATION
+                                    <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://ptu.ac.in/vco/">VC OFFICE</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://ptu.ac.in/registrar-office/">REGISTRAR OFFICE</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">FINANCE & ACCOUNTS</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">EXAMINATION</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">ACADEMICS</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">RESEARCH & DEVELOPMENT</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">PLANNING & EXTERNAL PROGRAMMES</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">COLLEGE DEVELOPMENT</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">STUDENT WELFARE</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">FACULTY WELFARE</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">OPEN AND DISTANCE LEARNING</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://ptu.ac.in/maintenance-and-engineering/">MAINTAINENCE LEARNING</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://ptu.ac.in/vigilance-cell/about/">VIGILANCE CELL</a></li>
+                            </ul>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMISSIONS
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://ptu.ac.in/admission-2022-23/about-ikgptu/">ADMISSION 2022-23 (REGULAR
+                                            MODE)</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="https://ptu.ac.in/phd/admission/">PHD ADMISSION</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="https://ptu.ac.in/foreign-languages/">FOREIGN LANGUAGES</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="https://ptu.ac.in/international-student/">INTERNATIONAL STUDENT</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">ACADEMIC CALENDAR</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="https://ptu.ac.in/syllabus/">SYLLABUS</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="https://ptu.ac.in/sample-papers/">SAMPLE PAPERS</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="https://ptu.ac.in/fees-structure/">FEES STRUCTURE</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="https://ptu.ac.in/academic-regulations/">ACADEMIC REGULATIONS</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="https://ptu.ac.in/admissions/">ADMISSION INFO (PREVIOUS SESSIONS)</a></li>
+
+
+                                </ul>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">UNIVERSITY CAMPUSES
+                                    <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="https://ptu.ac.in/programs-offered-2020-21/">PROGRAMMES OFFERED 2020-21</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="https://ptu.ac.in/syllabus/">SYLLABUS</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">ENGINEERING</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">APPLIED SCIENCES</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">MANAGEMENT STUDIES</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">MEDIA & MASS COMMUNICATION</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">HOSPITALITY, TOURISM & TRAVEL MANAGEMENT</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="https://ptu.ac.in/humanities-languages-cultural-studies/about/">HUMANITIES,
+                                            LANGUAGES & CULTURAL ACTIVITIES</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="https://ptu.ac.in/amritsar-campus/about/">IKGPTU AMRITSAR CAMPUS</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="https://ptu.ac.in/hoshiarpur-campus/about/">IKGPTU HOSHIARPUR CAMPUS</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="https://ptu.ac.in/mohali-campus-i/about/">IKGPTU MOHALI CAMPUS I</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="https://ptu.ac.in/mohali-campus-ii/about/">IKGPTU MOHALI CAMPUS II</a></li>
+                                    </ul>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">COLLEGES
+                                    <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="https://ptu.ac.in/affiliated-institutes/">AFFILIATED & AUTONOMOUS COLLEGES</a>
+                                            </li>
+
+                                        </ul>
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">CENTRAL FACILITIES
+                                    <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">KNOWLEDGE RESOURCE CENTER (LIBRARY)</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="https://ptu.ac.in/placements/training-placements-and-industrial-interface/">TRAINING,
+                                            PLACEMENT AND INDUSTRIAL INTERFACE</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="https://ptu.ac.in/entrepreneurship/entrepreneurship-and-incubation/">ENTERPRENEURSHIP
+                                            AND INCUBATION</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="https://ptu.ac.in/ciiit/ciiit-kapurthala/">CIIIT</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="https://ptu.ac.in/computer-center/">COMPUTER CENTER</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="https://ptu.ac.in/auditorium/">AUDITORIUM</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="https://ptu.ac.in/boys-girl-hostel/">BOYS & GIRLS HOSTEL</a></li>
+                                            </ul>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">STUDENT CORNER
+                                    <span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">MAIN CAMPUS NOTICEBOARD</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">STUDENT FACILITATION CENTRE</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">YOUTH AFFAIRS</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">SPORTS</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">NSS EVENTS</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">NCC EVENTS</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">STUDENT WELFARE SCHEMES</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">POST METRIC SCHOLARSHIP CELL</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">ANTI-RAGGING COMMITTEE</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">UNIVERSITY TRUSTED WEBSITES</a></li>
+                                                </ul>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">PUBLIC CORNER
+                                    <span class="caret"></span></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">NOTICEBOARD</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">JOB OPPORTUNITIES</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">PUBLIC GRIEVANCES</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">SC/ST GRIEVANCES</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">NEWS & EVENTS</a></li>
+                                                        <li class="divider"></li>
+
+                                                        <li><a href="#">TENDERS</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">NOTIFICATIONS</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">HOLIDAYS</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">RTI ACT</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">IT POLICY</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">E-WASTE POLICY</a></li>
+                                                    </ul>
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">IMPORTANT LINKS
+                                    <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">FREQUENTLY ASKED QUESTIONS (FAQ)</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">RESOURCES (TA/DA FORM ETC.)</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">E-OFFICE SUPPORT</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">RECORD RETENTION SCHEDULE</a></li>
+                                                        </ul>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="first.jpg">
+                </div>
+
+                <div class="item">
+                    <img src="second.jpg">
+                </div>
+
+                <div class="item">
+                    <img src="third.jpg">
+                </div>
+            </div>
+
+
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="btn-group btn-lg">
+            <button type="button" class="btn" style="background-color: rgb(53, 67, 128);padding:15px;"><a
+                            href="https://ptu.ac.in/" target="_blank" style=" color: yellow;">ADMISSIONS 2022-23</a></button>
+            <button type="button" class="btn" style=" background-color: green;padding:15px;"><a
+                            href="https://ptu.ac.in/#culture" target="_blank" style=" color: white;">CNRE-2023</a></button>
+            <button type="button" class="btn" style="background-color: orange;padding:15px;"><a
+                            href="https://ptu.ac.in/about-department-academic-and-college-development/" target="_blank"
+                            style=" color: white;">NAAC</a></button>
+            <button type="button" class="btn" style="background-color: red;padding:15px;"><a
+                            href="https://ptu.ac.in/office-staff-research-development" target="_blank"
+                            style=" color: white;">STUDENT FACILITATION CENTRE</a></button>
+            <button type="button" class="btn" style="background-color: rgb(11, 25, 90);padding:15px;"><a
+                            href="https://ptu.ac.in/maintenance-and-engineering" target="_blank"
+                            style=" color: white;">INTERNATIONAL STUDENTS</a></button>
+            <button type="button" class="btn" style="background-color: rgb(255, 211, 13);padding:15px;"><a
+                            href="https://ptu.ac.in/resources-ta-da-form-etc/" target="_blank" style=" color: white;">IKGPTU
+                            ALUMNI ASSOCIATION</a></button>
+        </div>
+
+        <div class="c">ANNOUNCEMENTS
+
+            <marquee direction="left" onmouseover='this.stop()' onmouseout='this.start()'><a href="'https://ptu.ac.in/dates-for-centralized-online-counselling-session-2022-23-of-b-tech-1st-year-lateral-entry-b-arch-b-pharmacy-1st-year-m-tech-mba-mca-courses-shall-announce-soon/" style=" color: white;">Dates for centralized online counselling session 2022-23 of B.TECH. 1ST year
+                            & lateral entry, B.ARCH., B.PHARMACY 1ST year, M.TECH., MBA & MCA courses shall announce soon.</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href='https://ptu.ac.in/3rd-scopus-indexed-international-conference-on-computing-networks-and-renewable-energy-cnre-2023/' style=" color: white;">3rd Scopus indexed International Conference on Computing, Networks and
+                            Renewable Energy (CNRE-2023)</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href='https://ptu.ac.in/walk-in-interview-for-guest-faulty-in-cse-department-main-campus/' style=" color: white;">Walk in Interview for Guest Faulty in CSE Department Main Campus</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href='https://ptu.ac.in/readmission-form-of-open-distance-learning-for-july-2021/' style=" color: white;">Readmission form of Open Distance Learning for July-2021</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='https://ptu.ac.in/academic-calendar-of-open-distance-learning-for-re-admission-july-2021/'
+                    style=" color: white;">Academic Calendar of Open Distance Learning for Re-admission July-2021</a>
+            </marquee>
+        </div>
+
+        <div class="colour">
+            <h1 class="w"><span style="color:rgb(11, 25, 90);">WELCOME TO</span><span style="color:rgb(219, 55, 61);">
+                            IKGPTU</span></h1>
+            <p style="text-align:center">_______<img src="hat.jpg" width="20px" height="20px">_______
+            </p>
+
+            <div class="col-lg-3" style="background-color:rgb(219, 55, 61);color:white;text-align:center;">
+                <h4>VICE CHANCELLOR</h4>
+                <div class="row" style="background-color:white;color:rgb(11, 25, 90);height:500px;">
+                    <img src="Sh.-Rahul-Bhandari-IAS-Vice-Chancellor.jpg" width="230px" height="250px">
+                    <h3>Sh. Rahul Bhandari, IAS</h3>
+                    <h4>Vice Chancellor, IKGPTU Jalandhar, Punjab, India.</h4>
+                    <h4>Principal Secretary, Technical Education & Industrial Training, Punjab</h4>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-lg-6">
+                <div class="tab">
+                    <button class="tablinks" onclick="myfun(event, 'UNIVERSITY LIFE')">UNIVERSITY LIFE</button>
+                    <button class="tablinks" onclick="myfun(event, 'NEWS & MAGAZINES')">NEWS & MAGAZINES</button>
+                    <button class="tablinks" onclick="myfun(event, 'RESEARCH')">RESEARCH</button>
+                    <button class="tablinks" onclick="myfun(event, 'PLACEMENT')">PLACEMENT</button>
+                </div>
+
+                <div id="UNIVERSITY LIFE" class="tabcontent">
+
+                    <img src="ptu.jpg" height="400px" width="500px">
+                </div>
+
+                <div id="NEWS & MAGAZINES" class="tabcontent">
+                    <img src="campus-mirror-2020.png" height="400px" width="500px">
+                </div>
+
+                <div id="RESEARCH" class="tabcontent">
+                    <div class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="research-highlights-1-480x370.jpg">
+                            </div>
+
+                            <div class="item">
+                                <img src="research-highlights-2-480x370.jpg">
+                            </div>
+
+                            <div class="item">
+                                <img src="research-highlights-3-480x370.jpg">
+                            </div>
+                        </div>
+
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div id="PLACEMENT" class="tabcontent">
+
+                    <img src="campus-placement-3.jpg" height="400px" width="500px">
+                </div>
+
+
+            </div>
+
+            <div class="col-lg-3" style="background-color:rgb(219, 55, 61);color:white;text-align:center;float:right;">
+                <h4>NOTICE BOARD</h4>
+                <div class="row" style="background-color:white;color:rgb(11, 25, 90);height:500px;white-space: wrap; overflow-y: scroll;">
+
+                    <ul type="square">
+                        <li><a href="">Brochure – Rules and Tools for effective Office Governance
+        12/08/2022</a></li>
+                        <hr>
+                        <li><a href="">List of affiliated colleges of the IKGPTU with Autonomous and NAAC Accreditation
+        12/08/2022
+        </a></li>
+                        <hr>
+                        <li><a href="">Branch Upgradation Order
+        11/08/2022</a></li>
+                        <hr>
+                        <li><a href="">Employability Enhancement Training Programme (3)
+        10/08/2022</a></li>
+                        <hr>
+                        <li><a href="">Final list of empaneled Guest faculty
+        10/08/2022</a></li>
+                        <hr>
+                        <li><a href="">Vinove_Software & Services Pvt. Ltd
+        08/08/2022</a></li>
+                        <hr>
+                        <li><a href="">Smartedge_education Pvt. Ltd Placement Drive
+        08/08/2022</a></li>
+                        <hr>
+                        <li><a href="">Intellipaat Online Internship & Placement Drive
+        08/08/2022</a></li>
+                        <hr>
+                        <li><a href="">Aliens Campus online placement Drive
+        08/08/2022</a></li>
+                        <hr>
+                        <li><a href="">BRANCH CHANGES ORDERS
+                                        04/08/2022</a></li>
+                        <hr>
+                        <li><a href="">NOTICE regarding Interviews_guest faculty_ECE
+                                        03/08/2022</a></li>
+                        <hr>
+                        <li><a href="">Bajaj Finance
+                                        02/08/2022</a></li>
+                        <hr>
+                        <li><a href="">Academic Programs to be offered by IKGPTU in its Main campus and Constituent
+                                        Campuses during Admission Session 2022-23 (Revised)
+                                        02/08/2022</a></li>
+                        <hr>
+                        <li><a href="">Facilitation to the students for participation in Centralized Online Counselling
+                                        to take admission in the Campuses of IKGPTU in Session 2022-23
+                                        01/08/2022</a></li>
+                        <hr>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h1 style="text-align:center"><span style="color:rgb(11, 25, 90);">IMPORTANT LINKS</h1>
+                        <p style="text-align:center">_______<img src="hat.jpg" width="20px"
+                                height="20px">_______</p>
+                    </div>
+        
+        
+                  <div id="tabsDiv">
+        
+                <button class="linkClass" onclick=
+                    "displayContent(event, 'p1')">
+                    Innovation & Incubation
+                </button>
+          
+                <button class="linkClass" onclick=
+                    "displayContent(event, 'p2')">
+                   Youth & Cultural
+                </button>
+          
+                <button class="linkClass" onclick=
+                    "displayContent(event, 'p3')">
+                    Sports
+                </button>
+          
+                <button class="linkClass" onclick=
+                    "displayContent(event, 'p4')">
+                   NSS
+                </button>
+          
+                <button class="linkClass" onclick=
+                    "displayContent(event, 'p5')">
+                    Alumni
+                </button>
+        
+            </div>
+          
+           
+            <div id="p1" class="contentClass">
+               
+          <img src="innov-home.jpg" style="float:right;margin:5px;height:200px; width:450px" >
+                <p>
+                   Entrepreneurship Cell is established at IKG PTU campus to strengthen the entrepreneurial activities and to instill the spirit of entrepreneurship among University students.
+                </p>
+          <p>Many Entrepreneurial Competition like Business Plan Competition in collaboration with The Indus Entrepreneurs (TiE) Chandigarh, Poster Making Competition, Rs. 200 Ventures and Talks by prominent Entrepreneurs are organized annually to promote innovation and out of box thinking in IKG PTU ecosystem.</p>
+        <button class="btn btn-danger" style="float:right"><a href="https://ptu.ac.in/entrepreneurship/entrepreneurship-and-incubation/" style="color:white;">Read More</a></button>
+            </div>
+          
+            <div id="p2" class="contentClass">
+                <img src="Inter-Zonal-YouthFest-2019.jpg" style="float:right;margin:5px;height:200px; width:450px" >
+          
+                <p>
+                    Department of Youth Affairs, being an important part of the University, working for the overall development of the students. With an objective to nurturing the young minds for their balanced growth and development. To channelize their energies in a positive way, Department of Youth Affairs organizes several activities to give a platform and develop the hidden talent. As the department encourages the young students to come forward and prove themselves by participating in various creative activities, in the same way the active participation of the students in these activities encourage the department to provide them more opportunities for their overall growth.
+                </p>
+          <p>Department organizes chain of activities throughout the year as Youth leadership training camps, F.D.P for Youth Coordinators, Four Zonal and Inter Zonal Youth Festivals….</p>
+        
+        <button class="btn btn-danger" style="float:right"><a href="https://ptu.ac.in/youth-and-cultural/about/" style="color:white;">Read More</a></button>
+            </div>
+          
+            <div id="p3" class="contentClass">
+                
+                <img src="sports-home.jpg" style="float:right;margin:5px;height:200px; width:450px" >
+          
+                <p>
+                    The Sports Department in the University has been established to promote the spirit of Sports participation amongst the students. The Department annually organizes the various activities under the guidance of the Sports Council of the University. The University also participates in different Inter-Varsity games.The Sports Department of the University is visualizing programmes to increase participation of students in different sports activities by offering financial incentives to the medal winners in different Inter-Varsity sports tournaments.
+                </p>
+        <p>The entire tuition fee of the medal winners at the Inter-Varsity level is refunded by the University. The University every year honors students who have scored more than 75% marks in addition to winning a medal in AIU sponsored All India or North-Zone sports or Youth Festival competitions. Every year conducts 16 Inter-College tournaments (Men & Women) for different games.</p>
+        
+        <button class="btn btn-danger" style="float:right;"><a href=""style="color:white;">Read More</a></button>
+            </div>
+          
+            <div id="p4" class="contentClass">
+                
+           <img src="nss-home.jpg" style="float:right;margin:5px;height:200px; width:450px" >
+                <p>
+                    NSS Department of I.K. Gujral Punjab Technical University is working on various areas of overall development, be it rural development or raising awareness on issues of environment, cleanliness, health issues, drug de-addiction, road safety, personality development and so on. The NSS activities carried out under the guidance of the NSS advisory council of the university, which is chaired by the Hon’ble Vice-Chancellor. He presides over all the meetings of the council. At present there are 74 units working in various affiliated colleges of IKGPTU including main campus at Kapurthala and its constituent campuses at Amritsar, Batala and Mohali. With a combined strength of 7400 dedicated NSS volunteers, NSS department of I.K.G. Punjab Technical University is one of the largest programs in the country and one of the decorated one. These 74 units are working on the areas where activities like seminars, workshops, field visits and surveys are carried out whole of the year. These 74 units have adopted 74 villages /slums to serve the community according to need of hours.
+                </p>
+        <p>In every session, NSS department organizes a host o f NSS activities in University Main and constituent campuses and different colleges affiliated to the university. In academic session 2019-20, NSS organized various activities.</p>
+        
+        <button class="btn btn-danger" style="float:right"><a href="" style="color:white;">Read More</a></button>
+            </div>
+          
+            <div id="p5" class="contentClass">
+                <img src="alumni-meet-ikgptu-1.jpg" style="float:right;margin:5px;height:200px; width:450px" >
+                <p>
+                    IKGPTU has a major responsibility of ushering our state and nation into an innovative society by producing world class technocrats. IKGPTU has done just that in last 22 years. We at IKGPTU realize that alumni are the brand ambassador of the institute and the current status that IKGPTU enjoys is the reflection of our alumni’s success. IKGPTU has always believed in life long bonds and our alumni are still a strong part of what we are today.
+                </p>
+        <p>Today IKGPTU alumni community is more than a million strong and you have made an impact in every walk of life. Armed with IKGPTU degree alumni have gone on to become entrepreneurs, performance artists, educators, scientists and public servants. All our alumni have unique personalities but we share common values of making a positive impact in the communities and organizations we work in.</p>
+        
+        <button class="btn btn-danger" style="float:right"><a href="https://alumni.ptu.ac.in/" style="color:white;">Read More</a></button>
+            </div>  
+        
+        
+        
+                    <h2 style="text-align:center;color:rgb(11, 25, 90);">GLIMPSES FROM UNIVERSITY CAMPUS</h2>
+                    <p style="text-align:center">_______<img src="hat.jpg" width="20px" height="20px">_______
+                    </p>
+        
+                    <img src="glimpses.jpg" width="1000px" height="600px" style="margin-left:100px;">
+        
+        
+        
+                    <div class="row" style="background-color:white;margin:3px;">
+                        <a href="https://gem.gov.in/"><img src="1.png" width="120px" heigth="50px"></a>
+                        <a href="https://data.gov.in/"><img src="2.png" width="120px" heigth="50px"></a>
+                        <a href="https://digitalindia.gov.in/"><img src="3.png" width="120px"
+                                heigth="50px"></a>
+                        <a href="https://www.india.gov.in/"><img src="4.png" width="120px" heigth="50px"></a>
+                        <a href="https://www.mygov.in/"><img src="5.png" width="120px" heigth="50px"></a>
+                        <a href=""><img src="6.png" width="120px" heigth="50px"></a>
+                        <a href="https://www.nvsp.in/"><img src="7.png" width="120px" heigth="50px"></a>
+                        <a href=""><img src="8.png" width="120px" heigth="50px"></a>
+                        <a href=""><img src="9.png" width="100px" heigth="50px"></a>
+                    </div>
+        
+                    <div class="column">
+                        <h4 style="text-align:center;">UNIVERSITY ADDRESS</h4>
+                        <p>I.K. Gujral Punjab Technical<br> University, Jalandhar - <br>Kapurthala Highway, VPO - <br>Ibban,
+                            Kapurthala-144603, Distt. Kapurthala<br> Email: registrar@ptu.ac.in<br> Phone:
+                            +91-1822-282533,35,83<br> For Student Enquiry: 1800-<br>330-2501</p>
+                    </div>
+        
+                    <div class="ft">
+                        <h6>Disclaimer : I. K. Gujral Punjab Technical University, Jalandhar tries to keep accurate information
+                            on its website(s). However, we cannot guarantee that information will always be up-to date. All
+                            official websites of the University are for information
+                            purposes only and does not constitute a legal contract between the University and any person or
+                            entity unless otherwise specified. Information on official University websites is subject to change
+                            without prior notice. Although every reasonable
+                            effort is made to present current and accurate information, the University makes no guarantees of
+                            any kind. If you see something in a PTU webpage that needs correction or updation, please contact
+                            us. Suggestions are always welcome.</h6>
+        
+                        <h5>2017-2020 © All Rights Reserved By IKGPTU.</h5>
+                    </div>
+        
+                </div>
+            </div>
+        </body>
+        
+        </html>

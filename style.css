@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#box {
+    display: flex;
+    width: 100%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.text1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    margin-top: 10px;
+    margin-left: 40px;
+    color: rgb(219, 55, 61);
+}
+
+.text {
+    font-size: small;
+    color: rgb(65, 84, 177);
+    margin-left: 30px;
+}
+
+.c {
+    margin-top: 3px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgb(11, 25, 90);
+    padding: 10px;
+}
+
+.colour {
+    background-color: rgb(239, 238, 233);
+    height: 2100px;
+}
+
+.w {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.column p {
+    color: rgb(11, 25, 90);
+    line-height: 20px;
+    text-align: center;
+}
+
+.ft {
+    background-color: rgb(11, 25, 90);
+    color: white;
+    padding: 10px;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    color: white;
+}
+
+.tab button {
+    background-color: lightgrey;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button:hover {
+    background-color: rgb(219, 55, 61);
+    ;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: white;
+}
+
+.linkclass {
+    float: left;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px 10px 10px;
+    background-color: grey;
+}
+
+#tabsDiv a:hover {
+    color: white;
+    background-color: rgb(219, 55, 61);
+    ;
+    font-size: 16px;
+}
+
+button.active {
+    background-color: #c0c0c0;
+}
+
+.contentClass {
+    display: none;
+    padding: 60px;
+    border: 2px solid #c0c0c0;
+    background-color: white;
+}
